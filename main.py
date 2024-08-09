@@ -1,11 +1,10 @@
 import pickle
 import streamlit as st
 import pandas as pd
-import joblib 
 
 # Load your trained model using joblib
 try:
-    model = joblib.load('xgb_model.sav')
+    model = pickle.load('xgb_model.sav')
     st.write("Model loaded successfully!")
 except Exception as e:
     st.write(f"Error loading model: {e}")
