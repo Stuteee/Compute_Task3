@@ -4,7 +4,7 @@ import pandas as pd
 
 # Load your trained model using joblib
 try:
-    model = pickle.load('xgb_model.sav')
+    model = pickle.load('xgb_model.sav','rb')
     st.write("Model loaded successfully!")
 except Exception as e:
     st.write(f"Error loading model: {e}")
